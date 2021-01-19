@@ -19,6 +19,3 @@ def predictMyPet(path):
     class_names=['cats', 'dogs']
     ans  = "This image most likely belongs to {} with a {:.2f} percent confidence.".format(class_names[np.argmax(score)], 100 * np.max(score))
     return ans
-
-path="C:\\Users\\harmpon\\Desktop\\Machine Learning\\dogscats\\image_data\\test\\353.jpg"
-print(predictMyPet(path))
