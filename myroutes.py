@@ -9,7 +9,7 @@ def predict():
     if(f.filename!=''):
         f.save('images/'+f.filename)                                    #saving file to be predicted
     
-    path="C:\\Users\\harmpon\\Desktop\\Flask pet identifier\\images\\"+f.filename    #path to the image file(change this as per your system)
+    path="images\\"+f.filename
     from runtfmodel import predictMyPet
     ans = predictMyPet(path)                                                    #call prediction function
     os.remove(path)                                                             #delete image after prediction
