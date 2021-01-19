@@ -7,9 +7,9 @@ def home():
 def predict():
     f= request.files['predictImage']            
     if(f.filename!=''):
-        f.save('images/'+f.filename)                                    #saving file to be predicted
+        f.save(f.filename)                                    #saving file to be predicted
     
-    path="images\\"+f.filename
+    path=f.filename
     from runtfmodel import predictMyPet
     ans = predictMyPet(path)                                                    #call prediction function
     os.remove(path)                                                             #delete image after prediction
